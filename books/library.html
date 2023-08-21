@@ -5,16 +5,49 @@
   /* Custom CSS for the book covers container */
   .book-covers-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-gap: 1rem;
     justify-items: center;
   }
 
   .book-cover {
     width: 100%;
-	border-radius:10px;
+    border-radius: 10px;
+  }
+
+  /* Borders based on rating */
+  .book-cover.rating-1 {
+    border: 3px solid silver;
+  }
+
+  .book-cover.rating-2 {
+    border: 3px solid #FFEF70;
+  }
+
+  .book-cover.rating-3 {
+    border: 3px solid #F24E7A;
+  }
+
+  .book-cover.rating-4 {
+    border: 3px solid #00CED1;
+  }
+
+  .book-cover.rating-5 {
+    border: 3px solid #B2FF02;
   }
 </style>
+
+<h3>Legend</h3>
+<p><i>colored borders are the rating of finished books.</i></p>
+<span style="background-color:#B2FF02; padding:.5rem;">Favorite</span >
+<span style="background-color:#00CED1; padding:.5rem;">Liked</span >
+<span style="background-color:#F24E7A; padding:.5rem;">Ok</span >
+<span style="background-color:#FFEF70; padding:.5rem;">Meh</span >
+<span style="background-color:silver; padding:.5rem;">Hated</span >
+<p style="mb-5">
+
+
+	/* STATUS READING */
 
 <div class="book-covers-container"></div>
 
@@ -42,3 +75,37 @@
     })
     .catch(error => console.error('Error:', error));
 </script>
+
+
+	/* STATUS READ / FINISHED */
+
+
+<div class="book-covers-container"></div>
+
+<script>
+  // Fetch the JSON data
+  fetch('https://raw.githubusercontent.com/immarisabel/personal-website-content/main/books/library.json')
+    .then(response => response.json())
+    .then(data => {
+      // Filter books with status: "read"
+      const readingBooks = data.filter(book => book.Status === 'read');
+
+      // Create book covers with the book data
+      const bookCoversContainer = document.querySelector('.book-covers-container');
+      readingBooks.forEach(book => {
+        const bookCover = document.createElement('div');
+        bookCover.className = 'book-cover book-tooltip';
+        bookCover.innerHTML = `
+          <a href="${book.ReviewLink}" target="_blank">
+            <img src="${book.CoverURL}" class="book-cover  rating-${book.Rating}" alt="Book Cover" style="max-width: 100px;">  </a><br>
+            <span class="mb-3"><highlight style="background-color:#ffff00;"></highlight></span>
+        `;
+        bookCoversContainer.appendChild(bookCover);
+      });
+    })
+    .catch(error => console.error('Error:', error));
+</script>
+
+
+
+
