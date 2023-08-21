@@ -1,0 +1,123 @@
+<head>
+  <title>Book Selection and Editing Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="library-container compact">
+    <h3>Select a Book:</h3>
+    <select id="bookSelect" class="form-control mb-5">
+      <option value="">-- Select a book --</option>
+    </select>
+
+
+    <form id="bookForm">
+
+      <div class="form-group">
+        <input type="text" class="form-control form-control-sm" id="nameInput" name="Name" placeholder="title" required>
+
+        <input type="text" class="form-control form-control-sm" id="authorInput" name="Author" placeholder="author"
+          required>
+      </div>
+
+      <div class="form-group">
+
+        <input type="text" id="genreInput" class="form-control form-control-sm" placeholder="genre" required>
+
+        <input type="number" id="lengthInput" class="form-control form-control-sm" placeholder="pages">
+      </div>
+      <div class="form-group">
+
+        <div class="star-rating">
+          <div class="rate">
+            <input type="radio" id="rating1" name="rating" value="1">
+            <label for="rating1" class="material-icons"></label>
+
+            <input type="radio" id="rating2" name="rating" value="2">
+            <label for="rating2" class="material-icons"></label>
+
+            <input type="radio" id="rating3" name="rating" value="3">
+            <label for="rating3" class="material-icons"></label>
+
+            <input type="radio" id="rating4" name="rating" value="4">
+            <label for="rating4" class="material-icons"></label>
+
+            <input type="radio" id="rating5" name="rating" value="5">
+            <label for="rating5" class="material-icons"></label>
+          </div>
+        </div>
+
+</div>
+<div class="form-group">
+
+
+
+        <select id="StatusInput" class="form-control form-control-sm" required>
+          <option value="" disabled selected>STATUS</option>
+          <option value="read">read</option>
+          <option value="reading">reading</option>
+          <option value="to read">to read</option>
+          <option value="ntf">ntf</option>
+        </select>
+
+     
+
+        <select id="languageInput" class="form-control form-control-sm" required>
+          <option value="" disabled selected>LANG</option>
+          <option value="EN">EN</option>
+          <option value="NL">NL</option>
+          <option value="ES">ES</option>
+        </select>
+
+        <select id="originInput" class="form-control form-control-sm" required>
+          <option value="" disabled selected>ORIGIN</option>
+          <option value="ebook">ebook</option>
+          <option value="library">library</option>
+          <option value="owned">owned</option>
+          <option value="audiobook">audiobook</option>
+          <option value="other">other</option>
+        </select>
+
+      </div>
+      <div class="form-group">
+
+        <label for="dateFinishedInput" class="sr-only">Date Finished:</label>
+        <input type="date" id="dateFinishedInput" class="form-control form-control-sm">
+
+        <label for="dateStartedInput" class="sr-only">Date Started:</label>
+        <input type="date" id="dateStartedInput" class="form-control form-control-sm" required>
+      </div>
+      <div class="form-group">
+
+        <input type="text" id="NotesInput" class="form-control form-control-sm" placeholder="notes">
+
+        <input type="text" id="isbnInput" class="form-control form-control-sm" placeholder="ISBN" required>
+      </div>
+      <div class="form-group">
+
+        <input type="text" id="reviewLinkInput" class="form-control form-control-sm" placeholder="review link">
+
+        <input type="text" id="coverURLInput" class="form-control form-control-sm" placeholder="cover-url" required>
+      </div>
+      <button type="button" id="saveButton" class="btn btn-primary mt-2">Save Changes</button>
+  </form>
+
+  <button type="button" id="downloadButton" class="btn btn-success mt-2">Download JSON</button>
+  <button type="button" id="commitButton" class="btn btn-success mt-2">Commit to GitHub</button>
+
+  <h2 class="mt-4">Updated JSON Data:</h2>
+  <div class="input-group mt-2">
+    <textarea id="jsonTextarea" class="form-control" rows="8"></textarea>
+    <div class="input-group-append">
+      <button type="button" id="copyButton" class="btn btn-secondary">COPY</button>
+    </div>
+  </div>
+ 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+ </div></body>
