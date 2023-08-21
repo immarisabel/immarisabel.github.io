@@ -1,59 +1,44 @@
 /* Code used on wordpress page to display my books */
+/* working backup code */
 
 <style>
-    /* Custom CSS for the book covers container */
-    .book-covers-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      grid-gap: 10px;
-      justify-items: center;
-    }
+  /* Custom CSS for the book covers container */
+  .book-covers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 10px;
+    justify-items: center;
+  }
 
-    .book-cover {
-      width: 100%;
-      border-radius: 10px;
-    }
+  .book-cover {
+    width: 100%;
+	border-radius:10px;
+  }
+</style>
 
-    .star-icon {
-      color: silver; /* You can change the color to match your design */
-      font-size: 10px !important; /* Adjust the size as needed */
-      margin-right: 2px; /* Space between stars */
-    }
-  </style>
+<div class="book-covers-container"></div>
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script>
+  // Fetch the JSON data
+  fetch('https://raw.githubusercontent.com/immarisabel/personal-website-content/main/books/library.json')
+    .then(response => response.json())
+    .then(data => {
+      // Filter books with status: "reading"
+      const readingBooks = data.filter(book => book.Status === 'reading');
 
-  <div class="book-covers-container"></div>
-
-
-
-
-  <script>
-    // Fetch the JSON data
-    fetch('https://raw.githubusercontent.com/immarisabel/personal-website-content/main/books/library.json')
-      .then(response => response.json())
-      .then(data => {
-        // Filter books with status: "read" or "reading" or the rest.
-        const readingBooks = data.filter(book => book.Status === 'read');
-
-        // Create book covers with the book data
-        const bookCoversContainer = document.querySelector('.book-covers-container');
-        readingBooks.forEach(book => {
-          const bookCover = document.createElement('div');
-          bookCover.className = 'book-cover book-tooltip';
-          
-          // Convert the numeric rating to star icons
-          const stars = `<span class="material-icons star-icon">star</span>`.repeat(book.Rating);
-          
-          bookCover.innerHTML = `
-            <a href="${book['Review Link']}" target="_blank">
-              <img src="${book.CoverURL}" class="book-cover" alt="Book Cover" style="max-width: 100px;">
-            </a><br>
-            <div class="rating">${stars}</div>
-          `;
-          
-          bookCoversContainer.appendChild(bookCover);
-        });
-      })
-      .catch(error => console.error('Error:', error));
-  </script>
+      // Create book covers with the book data
+      const bookCoversContainer = document.querySelector('.book-covers-container');
+      readingBooks.forEach(book => {
+        const bookCover = document.createElement('div');
+        bookCover.className = 'book-cover book-tooltip';
+        bookCover.innerHTML = `
+          <a href="${book.ReviewLink}" target="_blank">
+            <img src="${book.CoverURL}" class="book-cover" alt="Book Cover" style="max-width: 100px;">  </a><br>
+            <span class="mb-3"><highlight style="background-color:#ffff00;">READING</highlight></span>
+        
+        `;
+        bookCoversContainer.appendChild(bookCover);
+      });
+    })
+    .catch(error => console.error('Error:', error));
+</script>
