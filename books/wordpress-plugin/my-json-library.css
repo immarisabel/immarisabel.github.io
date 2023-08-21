@@ -1,0 +1,121 @@
+/* my-json-library.css */
+
+.library-container {
+  
+    padding: 20px;
+    margin-bottom: 20px;
+   
+}
+
+
+/* my-json-library.css */
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Optional: Add some spacing between the input fields */
+.form-group input:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+
+.library-container.compact {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.library-container .compact h2 {
+    margin-bottom: 10px;
+}
+
+.library-container .compact .form-control {
+    margin-bottom: .5rem;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.library-container .compact label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.library-container .compact select {
+    height: 30px;
+}
+
+.library-container .compact .btn {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.library-container .compact textarea {
+    font-size: 14px;
+    padding: 5px;
+    resize: vertical;
+}
+
+.library-container .compact .input-group {
+    margin-top: 10px;
+}
+
+
+  
+  
+  .rate {
+    float: left;
+    direction: ltr;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+#wpfooter { display: none;}
