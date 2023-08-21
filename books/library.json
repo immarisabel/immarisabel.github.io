@@ -1022,5 +1022,35 @@
     "ISBN": "9781447250890",
     "ReviewLink": "/no-review",
     "CoverURL": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1652699341i/59808550.jpg"
+  },
+  {
+    "Name": "gdfg",
+    "Author": "fg",
+    "Genre": "dfg",
+    "Length": 33,
+    "Status": "",
+    "Language": "",
+    "Origin": "library",
+    "Date Finished": "",
+    "Date Started": "",
+    "Notes": "",
+    "ISBN": "",
+    "ReviewLink": "",
+    "CoverURL": ""
+  },
+  {
+    "Name": "The Book of Form and Emptiness",
+    "Author": "Ruth Ozeki",
+    "Genre": "🦄 Magical Realism",
+    "Length": 560,
+    "Status": "reading",
+    "Language": "EN",
+    "Origin": "library",
+    "Date Finished": "2023-08-12",
+    "Date Started": "",
+    "Notes": "",
+    "ISBN": "9781838855239",
+    "ReviewLink": "",
+    "CoverURL": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1620986786i/56957514.jpg"
   }
 ]
