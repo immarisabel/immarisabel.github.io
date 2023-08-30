@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1"
+  ],
+  "id": "https://example.com/statuses/123",
+  "type": "Note",
+  "published": "2023-08-30T12:00:00Z",
+  "attributedTo": "https://example.com/users/user123",
+  "content": "Hello, world! This is my status update.",
+  "to": [
+    "https://example.com/users/user456",
+    "https://example.com/followers"
+  ],
+  "cc": [
+    "https://example.com/users/user789"
+  ],
+  "object": {
+    "id": "https://example.com/statuses/123",
+    "type": "Object",
+    "content": "Hello, world! This is my status update."
+  },
+  "signature": {
+    "type": "RsaSignature2017",
+    "creator": "https://example.com/users/user123#main-key",
+    "created": "2023-08-30T12:00:00Z",
+    "signatureValue": "ABCD..."
+  }
+}
