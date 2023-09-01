@@ -24,9 +24,9 @@
         <section class="mt-4">
             <h2>My Websites</h2>
             <ul>
-                <li><a href="https://marisabel.nl">https://marisabel.nl</a></li>
-                <li><a href="https://marisabel.nl/garden">https://marisabel.nl/garden</a></li>
-                <li><a href="https://marisabelmunozart.blogspot.com">https://marisabelmunozart.blogspot.com</a></li>
+                <li><a href="https://marisabel.nl">programming blog</a></li>
+                <li><a href="https://marisabel.nl/garden">personal blog</a></li>
+                <li><a href="https://marisabelmunozart.blogspot.com">art blog</a></li>
             </ul>
         </section>
 
@@ -41,9 +41,52 @@
         </section>
     </div>
 
+    <!-- RSS Feeds -->
+        <section class="mt-4">
+            <h2>RSS Feeds</h2>
+            <ul id="rss-feeds">
+                <!-- Feed items will be added here dynamically -->
+            </ul>
+        </section>
+    </div>
+
     <!-- Include Bootstrap JS (optional) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to fetch and display RSS feed items -->
+    <script>
+        const rssFeeds = [
+            "https://marisabel.nl/garden/feed/",
+            "https://marisabel.nl/feed/",
+            "https://marisabelmunozart.blogspot.com/feeds/posts/default?alt=rss"
+        ];
+
+        async function fetchAndDisplayRSSFeeds() {
+            const feedList = document.getElementById("rss-feeds");
+
+            for (const feedUrl of rssFeeds) {
+                try {
+                    const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${feedUrl}`);
+                    const data = await response.json();
+
+                    if (data.items && data.items.length > 0) {
+                        const feedTitle = data.feed.title;
+                        const feedItems = data.items.slice(0, 5); // Display the latest 5 items
+
+                        const feedContainer = document.createElement("div");
+                        feedContainer.innerHTML = `<h3>${feedTitle}</h3><ul>${feedItems.map(item => `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`).join("")}</ul>`;
+                        feedList.appendChild(feedContainer);
+                    }
+                } catch (error) {
+                    console.error(`Error fetching RSS feed: ${feedUrl}`, error);
+                }
+            }
+        }
+
+        // Fetch and display RSS feeds when the page loads
+        window.addEventListener("load", fetchAndDisplayRSSFeeds);
+    </script>
 </body>
 </html>
