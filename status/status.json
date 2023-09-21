@@ -1,49 +1,37 @@
 [
   {
-    "id": "2",
+    "id": "1",
     "status": "It took some searching. But I finally got this working! Turns out I was missing a word on the prefix table name . But I am happy to have a status update plugin. I've been wanting one for years but no one would make one because bird. But bird is dead. I am on Mastodon, but I wanted something of my own. I might set up some RSS to send these to there if I trully want to share with the world. For now, Mastodon is where I stay up to date with tech. here with myself.",
     "timestamp": "2023-08-30 17:32:18"
   },
   {
-    "id": "5",
+    "id": "2",
     "status": "My kid is getting theeth soon. Finally. At 9 months. It's like she turned into a saliva fountain. Ã¢ÂÂ²",
     "timestamp": "2023-08-30 19:11:14"
   },
   {
-    "id": "6",
+    "id": "3",
     "status": "I hate how I have to pay extra to get propper SSL on my host. But the cost is the same everywhere. If they include SSL on all their domains, it costs as much as mine plus extra SSL.",
     "timestamp": "2023-09-01 07:26:57"
   },
   {
-    "id": "7",
+    "id": "4",
     "status": "Tried to take my baby for a pancake date since she loves eating herself. 9 months. But she's on a wonder week, so the nap is off schedule, so there was no time. So I bought premade. She was too full for it. Glad I didn  't went ?",
     "timestamp": "2023-09-01 12:09:03"
   },
   {
-    "id": "10",
+    "id": "5",
     "status": "<a href=\"https://thewalrus.ca/goodreads-is-terrible/\">Article: Goodreads ins Terrible</a> Ã°ÂÂÂ­ I still use Goodreads for recommendations only. Mainly because our library recommendation system is purely Dutch. And I plan on keeping it, but I track now on my blog instead. Plus working on my own web app the way I want it without all the social mumbo jumbo. I guess I'll draft a blog post on this.",
     "timestamp": "2023-09-02 18:59:16"
   },
   {
-    "id": "11",
+    "id": "6",
     "status": "Finished reading Voordat het smelt by Heleen Blesgraaf. It's hard to find dutch sci-fi. Glad to have find it. Not mind blowing but very entertaining.",
     "timestamp": "2023-09-11 13:57:57"
   },
   {
-    "id": "12",
+    "id": "7",
     "status": "Been trying to find other ways to journal and even started on bullet journaling again to keep me back on track. I feel I was loosing my way with too much in my head, jumping from one task to the next.",
     "timestamp": "2023-09-15 18:16:31"
-  },
-  null,
-  {
-    "id": "8",
-    "status": "ccc",
-    "timestamp": "9/21/2023, 12:47:59 PM"
-  },
-  null,
-  {
-    "id": "10",
-    "status": "cccxzcvxzv",
-    "timestamp": "9/21/2023, 12:48:32 PM"
   }
 ]
