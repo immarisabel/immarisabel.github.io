@@ -6,7 +6,7 @@
   },
   {
     "id": "5",
-    "status": "My kid is getting theeth soon. Finally. At 9 months. It's like she turned into a saliva fountain. ⛲",
+    "status": "My kid is getting theeth soon. Finally. At 9 months. It's like she turned into a saliva fountain. â²",
     "timestamp": "2023-08-30 19:11:14"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "id": "10",
-    "status": "<a href=\"https://thewalrus.ca/goodreads-is-terrible/\">Article: Goodreads ins Terrible</a> 💭 I still use Goodreads for recommendations only. Mainly because our library recommendation system is purely Dutch. And I plan on keeping it, but I track now on my blog instead. Plus working on my own web app the way I want it without all the social mumbo jumbo. I guess I'll draft a blog post on this.",
+    "status": "<a href=\"https://thewalrus.ca/goodreads-is-terrible/\">Article: Goodreads ins Terrible</a> ð­ I still use Goodreads for recommendations only. Mainly because our library recommendation system is purely Dutch. And I plan on keeping it, but I track now on my blog instead. Plus working on my own web app the way I want it without all the social mumbo jumbo. I guess I'll draft a blog post on this.",
     "timestamp": "2023-09-02 18:59:16"
   },
   {
@@ -33,5 +33,11 @@
     "id": "12",
     "status": "Been trying to find other ways to journal and even started on bullet journaling again to keep me back on track. I feel I was loosing my way with too much in my head, jumping from one task to the next.",
     "timestamp": "2023-09-15 18:16:31"
+  },
+  null,
+  {
+    "id": "8",
+    "status": "ccc",
+    "timestamp": "9/21/2023, 12:47:59 PM"
   }
 ]
