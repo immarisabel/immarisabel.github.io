@@ -42,7 +42,7 @@
     {
         "defaults": 
         {
-            "backgroundImage": "C:\\Users\\munozm\\Desktop\\PERSONAL\\8495981.jpg",
+            "backgroundImage": "https://github.com/immarisabel/immarisabel.github.io/blob/main/config/night-fairycore-forest-desktop-wallpaper.jpg",
             "backgroundImageOpacity": 0.18,
             "colorScheme": "One Half Light",
             "experimental.retroTerminalEffect": false,
@@ -82,7 +82,7 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "backgroundImage": "C:\\Users\\munozm\\Desktop\\PERSONAL\\wallpapers\\night-fairycore-forest-desktop-wallpaper.jpg",
+                "backgroundImage": "https://github.com/immarisabel/immarisabel.github.io/blob/main/config/night-fairycore-forest-desktop-wallpaper.jpg",
                 "backgroundImageOpacity": 0.79,
                 "backgroundImageStretchMode": "fill",
                 "colorScheme": "Aurelia",
